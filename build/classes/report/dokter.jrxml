@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="86dba89b-103f-47fd-87c1-9739f8e28768">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[select*from tb_dokter]]>
+	</queryString>
+	<field name="id_dokter" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama_dokter" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jenis_kelamin" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="umur" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="agama" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="spesialisasi" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="alamat" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<group name="id_dokter">
+		<groupExpression><![CDATA[$F{id_dokter}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="10" width="555" height="14" uuid="423be1bd-ee34-4647-bab0-1c919855695d"/>
+				<textElement textAlignment="Center">
+					<font isBold="false" isUnderline="false" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[LAPORAN REKAP DATA DOKTER]]></text>
+			</staticText>
+			<textField pattern="d/M/yyyy">
+				<reportElement x="276" y="43" width="86" height="20" uuid="47a18da9-57d8-471d-99d2-048226cd6198"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="231" y="43" width="45" height="20" uuid="7592d6d7-7793-4170-83be-705d27faba47"/>
+				<text><![CDATA[Tanggal :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="183" y="23" width="196" height="20" uuid="acfede95-1b0e-473f-bf4e-a752cb2394f4"/>
+				<text><![CDATA[RUMAH SAKIT UMUM HAJI KOTA MEDAN XYZ]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="6" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="6" splitType="Stretch">
+			<line direction="BottomUp">
+				<reportElement x="0" y="5" width="555" height="1" uuid="e6205cd5-ee79-4432-a3fb-0bd52dc9ffde"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="74" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="16" width="555" height="1" uuid="9a38b2a4-dc0b-49a6-979e-138bdf28cd2c"/>
+			</line>
+			<line>
+				<reportElement x="0" y="72" width="555" height="1" uuid="707e92b0-efac-4ea9-ab4d-85b57ff177c6"/>
+			</line>
+			<staticText>
+				<reportElement x="1" y="17" width="67" height="16" uuid="81e6663a-c156-48f6-98d5-a06fdfa26e45"/>
+				<text><![CDATA[Nama:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="0" width="67" height="20" uuid="7a3c044c-181c-4485-b5f3-e320d1863729"/>
+				<text><![CDATA[ID Dokter :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="68" y="0" width="100" height="20" uuid="c870de1d-eaeb-4e56-ae00-6ccfc0c892e4"/>
+				<textFieldExpression><![CDATA[$F{id_dokter}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="1" y="33" width="67" height="15" uuid="ca36d628-2d83-4fe7-90e2-5e1348c10be6"/>
+				<text><![CDATA[Jenis Kelamin:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="231" y="18" width="68" height="15" uuid="fbdd5828-5980-44dd-8e5c-38d181003b75"/>
+				<text><![CDATA[Umur:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="48" width="67" height="20" uuid="619d79f9-fd99-48d3-92a4-9a078cf39515"/>
+				<text><![CDATA[Agama:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="68" y="48" width="100" height="20" uuid="88714c23-eb3b-40d6-b83f-635e69102a63"/>
+				<textFieldExpression><![CDATA[$F{agama}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="68" y="33" width="100" height="20" uuid="4d7e9159-821e-43d7-ae82-02f738a3741c"/>
+				<textFieldExpression><![CDATA[$F{jenis_kelamin}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="68" y="17" width="100" height="20" uuid="bb62b4f4-7e6f-4688-88cd-eb1f5069ee13"/>
+				<textFieldExpression><![CDATA[$F{nama_dokter}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="299" y="16" width="100" height="20" uuid="029776e2-01dd-4b33-87b0-7be510918939"/>
+				<textFieldExpression><![CDATA[$F{umur}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="231" y="33" width="68" height="15" uuid="82471ae1-19f1-4e1f-8114-509877c658d8"/>
+				<text><![CDATA[Spesialisasi :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="231" y="48" width="68" height="20" uuid="e93b1fa1-4bf9-4396-90f9-86f87d9f13c6"/>
+				<text><![CDATA[Alamat :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="299" y="33" width="100" height="20" uuid="c790b054-fea5-4a61-909b-928ec70ab0ba"/>
+				<textFieldExpression><![CDATA[$F{spesialisasi}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="299" y="48" width="100" height="20" uuid="55c389cb-9a98-47af-a7b7-9b154846ce30"/>
+				<textFieldExpression><![CDATA[$F{alamat}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

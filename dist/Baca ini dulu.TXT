@@ -1,0 +1,11 @@
+User PAss:
+
+id 		Pass		tipe
+=====================================
+admin		admin		sebagai admin
+papas		papas		sebagai kepala cabang/pegawai
+superadmin	superadmin	sebagai superadmin
+
+nama db=
+
+"rekam_medis"

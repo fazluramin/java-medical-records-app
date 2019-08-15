@@ -1,0 +1,1 @@
+modulSwing.ClPanelTransparan
